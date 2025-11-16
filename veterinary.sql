@@ -31,4 +31,12 @@ CREATE TABLE appointments (
 );
 
 
+CREATE TABLE doctors (
+    doctorid INT PRIMARY KEY,
+    dfirstname VARCHAR(50),
+    dlastname VARCHAR(50),
+    speciality VARCHAR(50),
+    phone INT,
+    email VARCHAR(50)
+);
 
