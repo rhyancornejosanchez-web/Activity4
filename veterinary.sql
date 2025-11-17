@@ -85,3 +85,15 @@ VALUES
     (9, 'Shadow', 'Cat', 'Maine Coon', '2019-04-25', 'Male', 'Black', 9),
     (10, 'Daisy', 'Dog', 'Poodle', '2020-10-14', 'Female', 'White', 10);
 
+INSERT INTO appointments(appointid, animalid, appointdate, reason)
+VALUES
+    (1.1, 1, 2025-02-01, 'Allergy'),
+    (1.2, 2, 2025-05-27, 'Vaccination'),
+    (1.3, 3, 2025-05-10, 'Allergy'),
+    (1.4, 4, 2025-07-23, 'Vaccination'),
+    (1.5, 5, 2025-07-24, 'Physical Examination'),
+    (1.6, 6, 2025-09-03, 'Urinary Tract Infections'),
+    (1.7, 5, 2025-09-29, 'Allergy'),
+    (1.8, 8, 2025-11-17, 'Vaccination'),
+    (1.9, 9, 2025-12-01, 'Vaccination'),
+    (1.10, 5, 2025-12-18, 'Allergy');
