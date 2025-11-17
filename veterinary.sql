@@ -45,6 +45,7 @@ CREATE TABLE invoices (
     appointid INT,
     totalamount DECIMAL(10,2),
     paymentdate DATE
+    FOREIGN KEY (appointid) REFERENCES appointments(appointid)
 );
 
 CREATE TABLE medicalrecords (
@@ -55,16 +56,32 @@ CREATE TABLE medicalrecords (
     diagnosis VARCHAR(50),
     prescription VARCHAR(50),
     notes TEXT
+    FOREIGN KEY (animalid) REFERENCES animals(animalid)
 );
 
-INSERT INTO owners (ownerid, ofirstname, olastname, phone, email) VALUES
-(1, 'John', 'Carter', '555-0101', 'john.carter@example.com'),
-(2, 'Emily', 'Dawson', '555-0102', 'emily.dawson@example.com'),
-(3, 'Michael', 'Reyes', '555-0103', 'michael.reyes@example.com'),
-(4, 'Sarah', 'Mitchell', '555-0104', 'sarah.mitchell@example.com'),
-(5, 'David', 'Gibson', '555-0105', 'david.gibson@example.com'),
-(6, 'Laura', 'Santos', '555-0106', 'laura.santos@example.com'),
-(7, 'Andrew', 'Wallace', '555-0107', 'andrew.wallace@example.com'),
-(8, 'Hannah', 'Lopez', '555-0108', 'hannah.lopez@example.com'),
-(9, 'Kevin', 'Brooks', '555-0109', 'kevin.brooks@example.com'),
-(10, 'Natalie', 'Porter', '555-0110', 'natalie.porter@example.com');
+INSERT INTO owners (ownerid, ofirstname, olastname, phone, email) 
+VALUES
+    (1, 'John', 'Carter', '09023426016', 'john.carter@example.com'),
+    (2, 'Emily', 'Dawson', '09320848135', 'emily.dawson@example.com'),
+    (3, 'Michael', 'Reyes', '09234574284', 'michael.reyes@example.com'),
+    (4, 'Sarah', 'Mitchell', '09983154152', 'sarah.mitchell@example.com'),
+    (5, 'David', 'Gibson', '09487284187', 'david.gibson@example.com'),
+    (6, 'Laura', 'Santos', '09092342601', 'laura.santos@example.com'),
+    (7, 'Andrew', 'Wallace', '09082342661', 'andrew.wallace@example.com'),
+    (8, 'Hannah', 'Lopez', '09101445386', 'hannah.lopez@example.com'),
+    (9, 'Kevin', 'Brooks', '09712309846', 'kevin.brooks@example.com'),
+    (10, 'Natalie', 'Porter', '09231236757', 'natalie.porter@example.com');
+
+INSERT INTO animals (animalid, name, species, breed, dateofbirth, gender, color, ownerid)
+VALUES
+    (1, 'Buddy', 'Dog', 'Labrador', '2019-03-15', 'Male', 'Crimson-Red', 1),
+    (2, 'Mittens', 'Cat', 'Siamese', '2020-07-10', 'Female', 'Cream', 2),
+    (3, 'Rocky', 'Dog', 'Bulldog', '2018-11-05', 'Male', 'Brown', 3),
+    (4, 'Luna', 'Cat', 'Persian', '2021-02-21', 'Female', 'White', 4),
+    (5, 'Charlie', 'Dog', 'Beagle', '2017-09-12', 'Male', 'Tri-color', 5),
+    (6, 'Bella', 'Rabbit', 'Mini Rex', '2022-01-02', 'Female', 'Gray', 6),
+    (7, 'Max', 'Dog', 'German Shepherd', '2016-06-30', 'Male', 'Black/Tan', 7),
+    (8, 'Coco', 'Bird', 'Parrot', '2015-12-19', 'Female', 'Green', 8),
+    (9, 'Shadow', 'Cat', 'Maine Coon', '2019-04-25', 'Male', 'Black', 9),
+    (10, 'Daisy', 'Dog', 'Poodle', '2020-10-14', 'Female', 'White', 10);
+
