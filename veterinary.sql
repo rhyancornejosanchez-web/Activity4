@@ -154,3 +154,5 @@ SELECT DISTINCT species
 FROM animals;
 
 SELECT SUM(totalamount) FROM invoices;
+
+SELECT COUNT(*) AS appointment_count FROM appointments WHERE ownerid = 8;
