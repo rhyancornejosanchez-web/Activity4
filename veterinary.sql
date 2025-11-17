@@ -146,11 +146,14 @@ DELETE FROM appointments
 WHERE appointid = 1.10;
 
 
-UPDATE doctors 
-SET dlastname = 'Reyes-Gonzales' 
-WHERE doctorid = 4;
+UPDATE doctors SET dlastname = 'Reyes-Gonzales' WHERE doctorid = 4;
 
 SELECT DISTINCT species
 FROM animals;
 
 SELECT SUM(totalamount) FROM invoices;
+
+SELECT a.name, COUNT(ap.appointid) AS total_apponitments FROM animals a JOIN
+appointments ap ON a.animalid = ap.animalid GROUP BY a.animalid, a.name ORDER BY total_apponitments DESC
+LIMIT 1;
+
