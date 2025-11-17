@@ -57,3 +57,14 @@ CREATE TABLE medicalrecords (
     notes TEXT
 );
 
+INSERT INTO owners (ownerid, ofirstname, olastname, phone, email) VALUES
+(1, 'John', 'Carter', '555-0101', 'john.carter@example.com'),
+(2, 'Emily', 'Dawson', '555-0102', 'emily.dawson@example.com'),
+(3, 'Michael', 'Reyes', '555-0103', 'michael.reyes@example.com'),
+(4, 'Sarah', 'Mitchell', '555-0104', 'sarah.mitchell@example.com'),
+(5, 'David', 'Gibson', '555-0105', 'david.gibson@example.com'),
+(6, 'Laura', 'Santos', '555-0106', 'laura.santos@example.com'),
+(7, 'Andrew', 'Wallace', '555-0107', 'andrew.wallace@example.com'),
+(8, 'Hannah', 'Lopez', '555-0108', 'hannah.lopez@example.com'),
+(9, 'Kevin', 'Brooks', '555-0109', 'kevin.brooks@example.com'),
+(10, 'Natalie', 'Porter', '555-0110', 'natalie.porter@example.com');
