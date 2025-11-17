@@ -153,7 +153,8 @@ FROM animals;
 
 SELECT SUM(totalamount) FROM invoices;
 
+SELECT COUNT(*) AS appointment_count FROM appointments WHERE ownerid = 8;
+
 SELECT a.name, COUNT(ap.appointid) AS total_apponitments FROM animals a JOIN
 appointments ap ON a.animalid = ap.animalid GROUP BY a.animalid, a.name ORDER BY total_apponitments DESC
 LIMIT 1;
-
