@@ -139,8 +139,11 @@ ALTER TABLE owners
 ADD COLUMN registereddate DATE;
 
 
-ALTER TABLE invoices 
+ALTER TABLE invoices
 RENAME COLUMN paymentdate to paymenttime;
 
 DELETE FROM appointments
 WHERE appointid = 1.10;
+
+
+UPDATE doctors SET dlastname = 'Reyes-Gonzales' WHERE doctorid = 4;
