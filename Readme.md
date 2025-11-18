@@ -1,3 +1,3 @@
 ## Collaborators
-Sanchez, Rhyan Cedrick C.
+Sanchez, Rhyan Cedrick C.<br>
 Garcia, Rev Tyron D.
